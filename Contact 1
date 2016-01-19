@@ -1,0 +1,42 @@
+$('#txt-input').mousedown(function (e) {
+  $('.help-block').removeClass("hidden").addClass('fadeIn');
+});
+
+
+$("#txt-input").mouseleave(function(){
+ if($(this).val().length === 0  ) {
+    $('.help-block').addClass("hidden").addClass('fadeOut');
+  }
+});
+
+
+
+<div class="container">
+<div class="col-md-6">
+  
+<div class="form-group">
+  <label class="col-md-3 control-label" for="textinput">Name</label>  
+  <div class="col-md-6">
+  <input name="textinput" type="text" placeholder="Your Name" class="form-control" id="txt-input">
+    
+  <span class="help-block pull-left">help</span>    
+  <span class="help-block pull-right hidden animated">help</span>  
+  </div>
+</div>
+  
+</div>   
+</div>
+
+
+
+/* CSS used here will be applied after bootstrap.css */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.css");
+body{padding:20px;}
+#txt-input{border-color:transparent !important;
+  border-bottom: 1px solid #ccc  !important;
+  outline:none  !important;
+  box-shadow:none  !important;
+}
+#txt-input:focus{ border-bottom: 1px solid #999 !important;}
+.control-label{padding-top:6px;}
